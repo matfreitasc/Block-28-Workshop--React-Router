@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Block 28 - React Router!</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script>
+    // nothing to see here, just a little something to make the page more fun
+    if (window.location.search.includes('?b')) {
+      const rainBananas = () => {
+        if(!window.location.search.includes('?b')){
+          return;
+        }
+        const banana = document.createElement('span');
+        banana.innerHTML = '🍌';
+        banana.style.position = 'fixed';
+        banana.style.top = `${Math.random() * 100}vh`;
+        banana.style.left = `${Math.random() * 100}vw`;
+        banana.style.fontSize = `${Math.random() * 3}rem`;
+        banana.style.zIndex = '9999';
+        document.body.appendChild(banana);
+        setTimeout(() => {
+          banana.remove();
+        }, 1000);
+      };
+      setInterval(rainBananas, 500);
+    }
+  </script>
 </html>
