@@ -2,11 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-import {
-	BrowserRouter,
-	createBrowserRouter,
-	RouterProvider,
-} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Blue from './pages/Blue.jsx'
 import Red from './pages/Red.jsx'
